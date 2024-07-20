@@ -32,7 +32,7 @@ variable "instance_type" {
   default     = "t3.micro"
 }
 
-variable "api_key" {
+variable "api_key_secret_id" {
   type        = string
   description = "(Required) API key for web app to talk to SaaS platform."
 }
@@ -47,4 +47,12 @@ variable "tfe_workspace_name" {
   description = "(required) name of networking workspace"
 }
 
+variable "playbook_repository" {
+  type        = string
+  description = "repo url for ansible preparing nginx playbook"
+}
 
+variable "ec2_role_name" {
+  type        = string
+  description = "(required) ec2 role name for instance"
+}
